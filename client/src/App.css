@@ -57,8 +57,13 @@
   
 }
 
-ul {
+li {
   list-style-type: none;
+}
+
+.result-answers{
+  font-size: 12px;
+  padding:5px;
 }
 
 .contents {
@@ -74,7 +79,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 30px;
 }
 
 .answers p{
