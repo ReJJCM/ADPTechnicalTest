@@ -4,7 +4,7 @@ class Result extends Component {
 
     render() {
 
-        let component = <Fragment>
+        const component = <Fragment>
             <h2>You scored</h2>
             <h2>{this.props.score} / 10</h2>
             <div className="answer correct">{this.props.correctQuestions.map(question => <li className="result-answers" key={question}> + {question.replaceAll('&quot;', '"').replaceAll('&#039;','\'')}</li>)}</div>

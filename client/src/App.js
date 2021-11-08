@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   getData = async () => {
-    let res = await axios.get('https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean')
+    const res = await axios.get('https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean')
 
     if (res.data.results) {
       this.setState({
@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   render() {
-    let game = this.state.gameState === 'play' ?
+    const game = this.state.gameState === 'play' ?
       <Play
         questions={this.state.questions}
         finished={(state, score, finalCorrectQuestions, finalWrongQuestions) => this.changeGameState(state, score, finalCorrectQuestions, finalWrongQuestions)} /> :

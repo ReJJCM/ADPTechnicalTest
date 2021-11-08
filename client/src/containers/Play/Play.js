@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import Check from '../../components/Check/Check'
+import CheckAnswers from '../../components/CheckAnswers/CheckAnswers'
 
 class Play extends Component {
 
@@ -61,11 +61,11 @@ class Play extends Component {
             category = this.state.questions[this.state.questionNumber - 1].category
         }
 
-        let questions = <Fragment>
+        const questions = <Fragment>
             <div className="contents-question">
                 <p className='question'>{questionText}</p>
             </div>
-            <Check
+            <CheckAnswers
                 answerComponent={this.state.answerComponent}
                 continue={() => this.continue()}
                 checkAnswer={(a) => this.checkAnswer(a)}
