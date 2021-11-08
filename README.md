@@ -6,8 +6,8 @@ Node version used: v17.0.1
 
 To clone this project run "git clone https://github.com/ReJJCM/ADPTechnicalTest.git"
 
-How to run (starting on root folder):
-npm install
-cd client
-npm install
+How to run (starting on root folder):  </br>
+npm install </br>
+cd client  </br>
+npm install  </br>
 npm start
