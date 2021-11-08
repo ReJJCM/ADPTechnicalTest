@@ -43,7 +43,6 @@ class Play extends Component {
 
     continue() {
         if (this.state.qNumber === 10) {
-            console.log('score', this.state.score)
             this.props.finished('end', this.state.score, this.state.correctQuestions, this.state.wrongQuestions)
         } else {
             this.setState({
@@ -63,8 +62,8 @@ class Play extends Component {
         }
 
         let questions = <Fragment>
-            <div className="contents">
-                <h3 className='question'>{qText}</h3>
+            <div className="contents-question">
+                <p className='question'>{qText}</p>
             </div>
             <Check
                 outOfTime={this.state.time}

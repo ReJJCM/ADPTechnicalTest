@@ -30,12 +30,12 @@ class App extends Component {
     }
   }
 
-  changeGameState(c, finalScore, finalCorrectQuestions, finalWrongQuestions) {
-    if (c === 'play') {
+  changeGameState(state, finalScore, finalCorrectQuestions, finalWrongQuestions) {
+    if (state === 'play') {
       this.getData()
       return
     }
-    if (c === 'end') {
+    if (state === 'end') {
       this.setState({
         gameState: 'end',
         score: finalScore,
@@ -43,7 +43,7 @@ class App extends Component {
         correctQuestions: finalCorrectQuestions
       })
     }
-    if (c === 'start') {
+    if (state === 'start') {
       this.setState({
         gameState: 'start',
       })
@@ -55,7 +55,7 @@ class App extends Component {
     let game = this.state.gameState === 'play' ?
       <Play
         questions={this.state.questions}
-        finished={(c, score, finalCorrectQuestions, finalWrongQuestions) => this.changeGameState(c, score, finalCorrectQuestions, finalWrongQuestions)} /> :
+        finished={(state, score, finalCorrectQuestions, finalWrongQuestions) => this.changeGameState(state, score, finalCorrectQuestions, finalWrongQuestions)} /> :
 
       this.state.gameState === 'end' ?
         <Result
@@ -73,7 +73,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="App-header">
+        <div className="app-header">
           {game}
         </div>
       </div>

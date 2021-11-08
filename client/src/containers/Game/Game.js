@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Header from '../../components/Header/Header'
 
 class Game extends Component {
 
@@ -10,16 +9,21 @@ class Game extends Component {
     render() {
         return (
             <Fragment>
-                <div className="container">
-                    <Header />
-                    <div className='homepage'>
-                        <span>You will be presented with 10 True or False questions.</span>
-                        <span> Can you score 100%? </span>
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => this.click()}>Begin</button>
+                <div className="container-homepage">
+                    <div className="header">
+                        <h1>Welcome to the Trivia Challange!</h1>
                     </div>
+                    <div className='homepage homepage-text'>
+                        <span>You will be presented with 10 True or False questions.</span>
+                    </div>
+                    <div className='homepage homepage-text'>
+                        <span> Can you score 100%? </span>
+                    </div>
+                    <button
+                            type="button"
+                            className="start-button"
+                            onClick={() => this.click()}>Begin
+                    </button>
                 </div>
             </Fragment>
         )
